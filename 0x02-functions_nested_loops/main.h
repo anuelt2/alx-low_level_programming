@@ -28,4 +28,7 @@ int print_last_digit(int);
 /* jack_bauer function prototype */
 void jack_bauer(void);
 
+/* add function prototype */
+int add(int, int);
+
 #endif
