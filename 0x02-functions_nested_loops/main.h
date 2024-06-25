@@ -31,4 +31,7 @@ void jack_bauer(void);
 /* add function prototype */
 int add(int, int);
 
+/* print_to_98 function protoytpe */
+void print_to_98(int n);
+
 #endif
