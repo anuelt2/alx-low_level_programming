@@ -1,5 +1,4 @@
-/* Declaration of protopype of _putchar */
-int _putchar(char c);
+#include "main.h"
 
 /**
  * print_alphabet - prints the alphabet in lower case
