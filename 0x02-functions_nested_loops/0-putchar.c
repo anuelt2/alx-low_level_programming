@@ -1,5 +1,4 @@
-/* declaring _putchar.c prototype */
-int _putchar(char);
+#include "main.h"
 
 /**
  * main - Entry point
