@@ -7,4 +7,7 @@ int _putchar(char c);
 /* print_alphabet function prototype */
 void print_alphabet(void);
 
+/* print_alphabet_x10 function prototype */
+void print_alphabet_x10(void);
+
 #endif
