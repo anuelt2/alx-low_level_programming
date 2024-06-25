@@ -34,4 +34,7 @@ int add(int, int);
 /* print_to_98 function protoytpe */
 void print_to_98(int n);
 
+/* times_table function prototype */
+void times_table(void);
+
 #endif
