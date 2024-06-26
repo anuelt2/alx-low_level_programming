@@ -15,12 +15,14 @@ int main(void)
 	fibo_1 = 1;
 	fibo_2 = 2;
 
-	for (i = 2; i <= 50; i++)
+	printf("%ld, %ld, ", fibo_1, fibo_2);
+
+	for (i = 2; i <= 49; i++)
 	{
 		fibo = fibo_2;
 		fibo_2 += fibo_1;
 		fibo_1 = fibo;
-		if (i <= 50)
+		if (i <= 49)
 			printf("%ld, ", fibo_2);
 	}
 	printf("%ld\n", fibo_2);
