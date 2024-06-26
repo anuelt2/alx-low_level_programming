@@ -17,10 +17,10 @@ int main(void)
 
 	printf("%lu, %lu, ", fib1, fib2);
 
-	for (i = 2; i <= 96; i++)
+	for (i = 3; i <= 96; i++)
 	{
 		fib = fib2;
-		fib2 += fib1;
+		fib2 = fib2 + fib1;
 		fib1 = fib;
 
 		if (i <= 96)
