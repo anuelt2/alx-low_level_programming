@@ -37,4 +37,7 @@ void print_to_98(int n);
 /* times_table function prototype */
 void times_table(void);
 
+/* print_times_table function prototype */
+void print_times_table(int n);
+
 #endif
