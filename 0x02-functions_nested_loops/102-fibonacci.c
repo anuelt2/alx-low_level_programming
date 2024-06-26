@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -8,17 +7,22 @@
  */
 int main(void)
 {
-	int i = 0;
-	long fibo[50];
+	int i;
+	long fibo_1;
+	long fibo_2;
+	long fibo;
 
-	fibo[0] = 1;
-	fibo[1] = 2;
+	fibo_1 = 1;
+	fibo_2 = 2;
 
-	for (i = 0; i <= 49; i++)
+	for (i = 2; i <= 50; i++)
 	{
-		fibo[i + 2] = fibo[i]  + fibo[i + 1];
-		printf("%ld, ", fibo[i]);
+		fibo = fibo_2;
+		fibo_2 += fibo_1;
+		fibo_1 = fibo;
+		if (i <= 50)
+			printf("%ld, ", fibo_2);
 	}
-	printf("\n");
+	printf("%ld\n", fibo_2);
 	return (0);
 }
