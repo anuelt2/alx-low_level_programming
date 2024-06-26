@@ -17,14 +17,14 @@ int main(void)
 
 	printf("%ld, %ld, ", fibo_1, fibo_2);
 
-	for (i = 2; i <= 49; i++)
+	for (i = 2; i <= 48; i++)
 	{
 		fibo = fibo_2;
 		fibo_2 += fibo_1;
 		fibo_1 = fibo;
-		if (i <= 49)
+		if (i <= 48)
 			printf("%ld, ", fibo_2);
 	}
-	printf("\n");
+	printf("%ld\n", fibo_2 + fibo_1);
 	return (0);
 }
