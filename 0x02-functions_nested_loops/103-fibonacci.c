@@ -12,12 +12,14 @@ int main(void)
 
 	fib_1 = 1;
 	fib_2 = 2;
+	fibo = 0;
+	sum = 0;
 
 	for (i = 0; i <= 49; i++)
 	{
 		if ((fib_2 % 2 == 0) && (fib_2 <= 4000000))
 		{
-			sum += fib_2;
+			sum = sum + fib_2;
 		}
 		fibo = fib_1 + fib_2;
 		fib_1 = fib_2;
