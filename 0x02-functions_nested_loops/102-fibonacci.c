@@ -25,6 +25,6 @@ int main(void)
 		if (i <= 49)
 			printf("%ld, ", fibo_2);
 	}
-	printf("%ld\n", fibo_2);
+	printf("\n");
 	return (0);
 }
