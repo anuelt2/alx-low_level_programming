@@ -19,4 +19,7 @@ void print_numbers(void);
 /* print_most_numbers function prototype */
 void print_most_numbers(void);
 
+/* print_line function prototype */
+void print_line(int n);
+
 #endif
