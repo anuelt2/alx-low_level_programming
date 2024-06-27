@@ -28,4 +28,7 @@ void print_diagonal(int n);
 /* print_square function prototype */
 void print_square(int size);
 
+/* more_numbers function prototype */
+void more_numbers(void);
+
 #endif
