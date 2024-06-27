@@ -31,4 +31,7 @@ void print_square(int size);
 /* more_numbers function prototype */
 void more_numbers(void);
 
+/* print_triangle function prototype */
+void print_triangle(int size);
+
 #endif
