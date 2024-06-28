@@ -34,4 +34,7 @@ void more_numbers(void);
 /* print_triangle function prototype */
 void print_triangle(int size);
 
+/* print_number function prototype */
+void print_number(int n);
+
 #endif
