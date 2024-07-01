@@ -10,4 +10,10 @@ void swap_int(int *a, int *b);
 /* _strlen function prototype */
 int _strlen(char *s);
 
+/* _puts function prototype */
+void _puts(char *str);
+
+/* _putchar function protoype */
+int _putchar(char c);
+
 #endif
