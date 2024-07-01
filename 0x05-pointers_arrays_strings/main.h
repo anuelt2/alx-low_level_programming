@@ -16,4 +16,7 @@ void _puts(char *str);
 /* _putchar function protoype */
 int _putchar(char c);
 
+/* print_rev function prototype */
+void print_rev(char *s);
+
 #endif
