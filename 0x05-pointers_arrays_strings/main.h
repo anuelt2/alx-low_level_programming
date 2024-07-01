@@ -19,4 +19,7 @@ int _putchar(char c);
 /* print_rev function prototype */
 void print_rev(char *s);
 
+/* rev_string function prototype */
+void rev_string(char *s);
+
 #endif
