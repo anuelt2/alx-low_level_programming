@@ -13,7 +13,7 @@ void puts_half(char *str)
 
 	while (str[index] != '\0')
 		index++;
-	half = index / 2;
+	half = (index + 1) / 2;
 	for (index = half; index < half * 2; index++)
 		_putchar(str[index]);
 	_putchar('\n');
