@@ -28,4 +28,7 @@ char *cap_string(char *);
 /* leet function prototype */
 char *leet(char *);
 
+/* rot13 function prototype */
+char *rot13(char *);
+
 #endif
