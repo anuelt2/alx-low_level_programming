@@ -22,4 +22,7 @@ void reverse_array(int *a, int n);
 /* string_toupper function protocol */
 char *string_toupper(char *);
 
+/* cap_string function protocol */
+char *cap_string(char *);
+
 #endif
