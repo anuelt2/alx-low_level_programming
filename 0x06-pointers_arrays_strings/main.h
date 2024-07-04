@@ -19,4 +19,7 @@ int _strcmp(char *s1, char *s2);
 /* reverse function protocol */
 void reverse_array(int *a, int n);
 
+/* string_toupper function protocol */
+char *string_toupper(char *);
+
 #endif
