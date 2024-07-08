@@ -19,4 +19,10 @@ unsigned int _strspn(char *s, char *accept);
 /* _strpbrk function prototype */
 char *_strpbrk(char *s, char *accept);
 
+/* _strstr function prototype */
+char *_strstr(char *haystack, char *needle);
+
+/* print_chessboard function prototype */
+void print_chessboard(char (*a)[8]);
+
 #endif
