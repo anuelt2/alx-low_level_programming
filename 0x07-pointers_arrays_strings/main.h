@@ -16,4 +16,7 @@ char *_strchr(char *s, char c);
 /* _strspn function prototype */
 unsigned int _strspn(char *s, char *accept);
 
+/* _strpbrk function prototype */
+char *_strpbrk(char *s, char *accept);
+
 #endif
