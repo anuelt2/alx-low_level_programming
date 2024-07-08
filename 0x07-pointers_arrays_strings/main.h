@@ -10,4 +10,7 @@ char *_memset(char *s, char b, unsigned int n);
 /* _memcpy function prototype */
 char *_memcpy(char *dest, char *src, unsigned int n);
 
+/* _strchr function prototype */
+char *_strchr(char *s, char c);
+
 #endif
