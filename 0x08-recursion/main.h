@@ -25,4 +25,10 @@ int _sqrt_recursion(int n);
 /* _sqrt function prototype */
 int _sqrt(int x, int i);
 
+/* is_prime_number function prototype */
+int is_prime_number(int n);
+
+/* _prime function prototype */
+int _prime(int num, int i);
+
 #endif
