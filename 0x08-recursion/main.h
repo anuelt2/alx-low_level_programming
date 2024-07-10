@@ -31,4 +31,13 @@ int is_prime_number(int n);
 /* _prime function prototype */
 int _prime(int num, int i);
 
+/* is_palindrome function prototype */
+int is_palindrome(char *s);
+
+/* _strlen_p function prototype */
+int _strlen_p(char *s);
+
+/* str_check function prototype */
+int str_check(char *s, int start, int end);
+
 #endif
