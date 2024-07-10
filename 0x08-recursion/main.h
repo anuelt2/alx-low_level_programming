@@ -40,4 +40,7 @@ int _strlen_p(char *s);
 /* str_check function prototype */
 int str_check(char *s, int start, int end);
 
+/* wildcmp function prototype */
+int wildcmp(char *s1, char *s2);
+
 #endif
