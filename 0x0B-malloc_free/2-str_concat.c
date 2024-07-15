@@ -1,18 +1,18 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
  * str_concat - Concatenates two strings
  * @s1: First parameter
  * @s2: Second parameter
  * Return: Pointer to allocated memory
  */
+
 char *str_concat(char *s1, char *s2)
 {
 	char *s12;
 	unsigned int size1, size2, size12, i, j;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
 	size1 = size2 = i = j = 0;
 	while (s1[size1] != '\0')
 		size1++;
@@ -35,5 +35,6 @@ char *str_concat(char *s1, char *s2)
 		j++;
 	}
 	s12[i] = '\0';
+
 	return (s12);
 }
