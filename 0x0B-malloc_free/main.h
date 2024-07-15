@@ -13,4 +13,7 @@ char *_strdup(char *str);
 /* str_concat function prototype */
 char *str_concat(char *s1, char *s2);
 
+/* alloc_grid function prototype */
+int **alloc_grid(int width, int height);
+
 #endif
