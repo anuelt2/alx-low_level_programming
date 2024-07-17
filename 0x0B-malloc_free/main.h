@@ -22,4 +22,13 @@ void free_grid(int **grid, int height);
 /* argstostr function prototype */
 char *argstostr(int ac, char **av);
 
+/* strtow function prototype */
+char **strtow(char *str);
+
+/* word_count function prototype */
+int word_count(char *str);
+
+/* wordcpy function prototype */
+void wordcpy(char **array, char *str);
+
 #endif
