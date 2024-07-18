@@ -19,4 +19,7 @@ int *array_range(int min, int max);
 /* _realloc function prototype */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
+/* _isdigit function prototype */
+int _isdigit(char *s);
+
 #endif
