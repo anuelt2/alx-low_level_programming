@@ -22,4 +22,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 /* _isdigit function prototype */
 int _isdigit(char *s);
 
+/* _strlen function prototype */
+int _strlen(char *num1, char *num2);
+
+/* mulstr function prototype */
+int *mulstr(char *num1, char *num2, int size);
+
+/* arr_to_str function prototype */
+char *arr_to_str(int *arr, int size);
+
 #endif
