@@ -17,7 +17,12 @@ int _isdigit(char *s)
 	{
 		if (s[i] < 48 || s[i] > 57)
 		{
-			printf("Error\n");
+			_putchar('E');
+			_putchar('r');
+			_putchar('r');
+			_putchar('o');
+			_putchar('r');
+			_putchar('\n');
 			exit(98);
 		}
 	}
@@ -135,7 +140,12 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		_putchar('E');
+		_putchar('r');
+		_putchar('r');
+		_putchar('o');
+		_putchar('r');
+		_putchar('\n');
 		exit(98);
 	}
 
