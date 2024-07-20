@@ -156,8 +156,19 @@ int main(int argc, char *argv[])
 	num2 = argv[2];
 	size = _strlen(num1, num2);
 	arr = mulstr(num1, num2, size);
+	if (arr == NULL)
+	{
+		printf("Error\n");
+		exit(98);
+	}
 	mul = arr_to_str(arr, size);
+	if (mul == NULL)
+	{
+		printf("Error\n");
+		exit(98);
+	}
 	printf("%s\n", mul);
+	free(mul);
 
 	return (0);
 }
