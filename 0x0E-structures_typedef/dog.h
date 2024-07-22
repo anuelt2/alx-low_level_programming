@@ -22,4 +22,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 /* print_dog function prototype */
 void print_dog(struct dog *d);
 
+/* new_dog function prototype */
+dog_t *new_dog(char *name, float age, char *owner);
+
 #endif
