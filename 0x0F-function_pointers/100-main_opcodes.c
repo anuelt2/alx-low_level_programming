@@ -8,7 +8,7 @@
  * Return: Void
  */
 
-void print_opcodes(char *main_add, int bytes)
+void print_opcodes(unsigned char *main_add, int bytes)
 {
 	int i;
 
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	print_opcodes((char *)&main, bytes);
+	print_opcodes((unsigned char *)&main, bytes);
 
 	return (0);
 }
