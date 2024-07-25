@@ -13,4 +13,7 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 /* print_strings funtion prototype */
 void print_strings(const char *separator, const unsigned int n, ...);
 
+/* print_all function prototype */
+void print_all(const char * const format, ...);
+
 #endif
