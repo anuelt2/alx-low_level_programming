@@ -39,4 +39,7 @@ list_t *add_node_end(list_t **head, const char *str);
 /* free_list function prototype */
 void free_list(list_t *head);
 
+/* first_constructor function prototype */
+void first_constructor(void);
+
 #endif
