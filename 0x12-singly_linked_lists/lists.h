@@ -36,4 +36,7 @@ list_t *add_node(list_t **head, const char *str);
 /* add_node_end function prototype */
 list_t *add_node_end(list_t **head, const char *str);
 
+/* free_list function prototype */
+void free_list(list_t *head);
+
 #endif
