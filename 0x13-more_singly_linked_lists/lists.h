@@ -55,4 +55,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 /* delete_nodeint_at_index function prototype */
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
+/* reverse_listint function prototype */
+listint_t *reverse_listint(listint_t **head);
+
 #endif
