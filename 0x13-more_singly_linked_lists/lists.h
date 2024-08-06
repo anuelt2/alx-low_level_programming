@@ -43,4 +43,7 @@ void free_listint2(listint_t **head);
 /* pop_listint function prototype */
 int pop_listint(listint_t **head);
 
+/* get_nodeint_at_index function prototype */
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+
 #endif
