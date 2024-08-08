@@ -14,4 +14,7 @@ void print_binary(unsigned long int n);
 /* get_bit function prototype */
 int get_bit(unsigned long int n, unsigned int index);
 
+/* set_bit function prototype */
+int set_bit(unsigned long int *n, unsigned int index);
+
 #endif
