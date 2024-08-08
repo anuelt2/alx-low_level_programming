@@ -17,4 +17,7 @@ int get_bit(unsigned long int n, unsigned int index);
 /* set_bit function prototype */
 int set_bit(unsigned long int *n, unsigned int index);
 
+/* clear_bit function prototype */
+int clear_bit(unsigned long int *n, unsigned int index);
+
 #endif
