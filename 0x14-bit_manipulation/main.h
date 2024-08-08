@@ -23,4 +23,7 @@ int clear_bit(unsigned long int *n, unsigned int index);
 /* flip_bits function prototype */
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
+/* get_endianness function prototype */
+int get_endianness(void);
+
 #endif
