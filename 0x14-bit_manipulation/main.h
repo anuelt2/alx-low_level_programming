@@ -11,4 +11,7 @@ unsigned int binary_to_uint(const char *b);
 /* print_binary function prototype */
 void print_binary(unsigned long int n);
 
+/* get_bit function prototype */
+int get_bit(unsigned long int n, unsigned int index);
+
 #endif
