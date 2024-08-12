@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	if (f_src == -1)
 		process_errors(f_src, 0, argv);
 
-	f_dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	f_dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (f_dest == -1)
 	{
 		close(f_src);
