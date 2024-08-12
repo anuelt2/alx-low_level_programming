@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	f_des = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	f_des = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (f_des == -1)
 	{
 		return (-1);
@@ -29,13 +29,11 @@ int create_file(const char *filename, char *text_content)
 	{
 		text_content = "";
 	}
-	else
+
+	content = 0;
+	while (text_content[content])
 	{
-		content = 0;
-		while (text_content[content])
-		{
-			content++;
-		}
+		content++;
 	}
 
 	contentWrite = write(f_des, text_content, content);
