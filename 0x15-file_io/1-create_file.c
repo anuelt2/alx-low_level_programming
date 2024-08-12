@@ -39,8 +39,9 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	contentWrite = write(f_des, text_content, content);
-	if (contentWrite == -1)
+	if (contentWrite == -1 || contentWrite != content)
 	{
+		close(f_des);
 		return (-1);
 	}
 	close(f_des);
