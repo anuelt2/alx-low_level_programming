@@ -19,20 +19,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-
 	f_des = open(filename, O_RDONLY);
 	if (f_des == -1)
 	{
 		return (0);
 	}
-
 	buffer = malloc(letters);
 	if (buffer == NULL)
 	{
 		close(f_des);
 		return (0);
 	}
-
 	lettersRead = read(f_des, buffer, letters);
 	if (lettersRead == -1)
 	{
@@ -40,7 +37,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(f_des);
 		return (0);
 	}
-
 	lettersWrite = write(STDOUT_FILENO, buffer, lettersRead);
 	free(buffer);
 	if (lettersWrite == -1 || lettersWrite != lettersRead)
