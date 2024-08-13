@@ -16,7 +16,7 @@ void process_errors(int src, int dest, char **av);
 int main(int argc, char **argv)
 {
 	int f_src, f_dest, cls, cld;
-	ssize_t r_content, w_content;
+	ssize_t r_content, w_content, wt;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -38,12 +38,17 @@ int main(int argc, char **argv)
 
 	while ((r_content = read(f_src, buffer, sizeof(buffer))) > 0)
 	{
-		w_content = write(f_dest, buffer, r_content);
-		if (w_content == -1 || w_content != r_content)
+		wt = 0;
+		while (wt < r_content)
 		{
-			close(f_src);
-			close(f_dest);
-			process_errors(0, -1, argv);
+			w_content = write(f_dest, buffer + wt, r_content - wt);
+			if (w_content == -1)
+			{
+				close(f_src);
+				close(f_dest);
+				process_errors(0, -1, argv);
+			}
+			wt += w_content;
 		}
 	}
 	if (r_content == -1)
@@ -70,22 +75,22 @@ int main(int argc, char **argv)
 
 void process_errors(int src, int dest, char **av)
 {
-	if (src == -1 && av != NULL)
+	if (src != 0 && av != NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	else if (dest == -1 && av != NULL)
+	else if (dest != 0 && av != NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
 		exit(99);
 	}
-	else if (src != 0 && av == NULL)
+	else if (src != 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src);
 		exit(100);
 	}
-	else if (dest != 0 && av == NULL)
+	else if (dest != 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", dest);
 		exit(100);
