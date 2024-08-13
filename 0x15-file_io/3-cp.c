@@ -51,11 +51,11 @@ int main(int argc, char **argv)
 		process_errors(-1, 0, argv);
 	cls = close(f_src);
 	if (cls == -1)
-		process_errors(-1, 0, argv);
+		process_errors(f_src, 0, NULL);
 
 	cld = close(f_dest);
 	if (cld == -1)
-		process_errors(0, -1, argv);
+		process_errors(0, f_dest, NULL);
 
 	return (0);
 }
@@ -81,12 +81,12 @@ void process_errors(int src, int dest, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
 		exit(99);
 	}
-	else if (src == -1 && av == NULL)
+	else if (src != 0 && av == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src);
 		exit(100);
 	}
-	else if (dest == -1 && av == NULL)
+	else if (dest != 0 && av == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", dest);
 		exit(100);
