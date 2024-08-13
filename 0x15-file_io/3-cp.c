@@ -88,7 +88,7 @@ void process_errors(int src, int dest, char **av)
 	}
 	if (dest != 0 && av != NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 }
