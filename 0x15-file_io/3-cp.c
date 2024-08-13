@@ -36,7 +36,6 @@ int main(int argc, char **argv)
 		process_errors(0, f_dest, argv);
 	}
 
-	r_content = 1024;
 	while ((r_content = read(f_src, buffer, sizeof(buffer))) > 0)
 	{
 		w_content = write(f_dest, buffer, r_content);
