@@ -228,7 +228,7 @@ void shash_table_delete(shash_table_t *ht)
 }
 
 /**
- * insert sorted - Inserts new node into sorted list
+ * insert_sorted - Inserts new node into sorted list
  * @ht: The sorted hash table
  * @new_shash_node: New node
  *
