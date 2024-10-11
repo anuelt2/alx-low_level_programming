@@ -54,4 +54,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 /* hash_table_print function prototype */
 void hash_table_print(const hash_table_t *ht);
 
+/* hash_table_delete function prototype */
+void hash_table_delete(hash_table_t *ht);
+
 #endif
