@@ -9,12 +9,6 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: ${OBJ} m.h
 	${CC} ${OBJ} -o ${NAME}
 
-main.o: main.c
-	gcc -Wall -Werror -Wextra -pedantic -c main.c -o main.o
-
-school.o: school.c
-	gcc -Wall -Werror -Wextra -pedantic -c school.c -o school.o
-
 clean:
 	${RM} *~ ${NAME}
 
