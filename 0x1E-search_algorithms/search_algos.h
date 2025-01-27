@@ -7,4 +7,7 @@
 /* linear_search function prototype */
 int linear_search(int *array, size_t size, int value);
 
+/* binary_search function prototype */
+int binary_search(int *array, size_t size, int value);
+
 #endif
