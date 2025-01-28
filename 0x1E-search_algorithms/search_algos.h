@@ -14,4 +14,7 @@ int binary_search(int *array, size_t size, int value);
 /* jump_search function prototype */
 int jump_search(int *array, size_t size, int value);
 
+/* interpolation_search function prototype */
+int interpolation_search(int *array, size_t size, int value);
+
 #endif
