@@ -4,7 +4,6 @@
  * adv_bin_helper - Searches for the first occurrence of a value in a sorted
  * array of integers using an advanced Binary search algorithm with recursion
  * @array: Pointer to the first element in the array to search in
- * @size: Number of elements in @array
  * @value: The value to search for
  * @min: Lower index of subarray to search
  * @max: Upper index of subarray to search
@@ -12,15 +11,17 @@
  * Return: Index where @value is located, -1 otherwise
  */
 
-int adv_bin_helper(int *array, size_t size, int value, size_t min, size_t max)
+int adv_bin_helper(int *array, int value, size_t min, size_t max)
 {
 	size_t i, mid;
 
-	if (array == NULL || size == 0 || min > max)
+	if (min > max)
 		return (-1);
 
 	mid = min + (max - min) / 2;
+
 	printf("Searching in array: ");
+
 	for (i = min; i <= max; i++)
 	{
 		if (i < max)
@@ -37,22 +38,20 @@ int adv_bin_helper(int *array, size_t size, int value, size_t min, size_t max)
 		}
 		else
 		{
-			max = mid - 1;
-			return (adv_bin_helper(array, size, value, min, max));
+			max = mid;
+			return (adv_bin_helper(array, value, min, max));
 		}
 	}
 	if (value < array[mid])
 	{
 		max = mid - 1;
-		return (adv_bin_helper(array, size, value, min, max));
+		return (adv_bin_helper(array, value, min, max));
 	}
 	else
 	{
 		min = mid + 1;
-		return (adv_bin_helper(array, size, value, min, max));
+		return (adv_bin_helper(array, value, min, max));
 	}
-
-	return (-1);
 }
 
 /**
@@ -69,8 +68,13 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	size_t min, max;
 
+	if (array == NULL || size == 0)
+	{
+		return (-1);
+	}
+
 	min = 0;
 	max = size - 1;
 
-	return (adv_bin_helper(array, size, value, min, max));
+	return (adv_bin_helper(array, value, min, max));
 }
