@@ -5,6 +5,22 @@
 #include <stddef.h>
 #include <math.h>
 
+/**
+ * struct listint_s - Singly linked list
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ *
+ * Description: Singly linked list node structure
+ */
+typedef struct listint_s
+{
+	int n;
+	size_t index;
+	struct listint_s *next;
+} listint_t;
+
 /* linear_search function prototype */
 int linear_search(int *array, size_t size, int value);
 
@@ -22,5 +38,8 @@ int exponential_search(int *array, size_t size, int value);
 
 /* advanced_binary function prototype */
 int advanced_binary(int *array, size_t size, int value);
+
+/* jump_list function prototype */
+listint_t *jump_list(listint_t *list, size_t size, int value);
 
 #endif
