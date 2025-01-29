@@ -16,7 +16,9 @@ int adv_bin_helper(int *array, int value, size_t min, size_t max)
 	size_t i, mid;
 
 	if (min > max)
+	{
 		return (-1);
+	}
 
 	mid = min + (max - min) / 2;
 
@@ -30,28 +32,19 @@ int adv_bin_helper(int *array, int value, size_t min, size_t max)
 			printf("%d\n", array[i]);
 	}
 
-	if (value == array[mid])
+	if (value == array[mid] && (mid == min || array[mid - 1] != value))
 	{
-		if (mid == 0 || array[mid - 1] < value)
-		{
-			return (mid);
-		}
-		else
-		{
-			max = mid;
-			return (adv_bin_helper(array, value, min, max));
-		}
+		return (mid);
 	}
-	if (value < array[mid])
+
+	if (value <= array[mid])
 	{
-		max = mid - 1;
+		max = mid;
 		return (adv_bin_helper(array, value, min, max));
 	}
-	else
-	{
-		min = mid + 1;
-		return (adv_bin_helper(array, value, min, max));
-	}
+
+	min = mid + 1;
+	return (adv_bin_helper(array, value, min, max));
 }
 
 /**
